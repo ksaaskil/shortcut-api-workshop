@@ -21,7 +21,9 @@ const AppBar = props => (
     align="center"
     justify="start"
     background="brand"
-    pad={{ left: "medium", right: "medium", vertical: "small" }}
+    gap="medium"
+    round="none"
+    pad={{ horizontal: "small", vertical: "small" }}
     margin="none"
     elevation="medium"
     style={{ zIndex: "1" }}
@@ -32,20 +34,18 @@ const AppBar = props => (
 function App() {
   const [navState, setNavState] = React.useState("chuck");
   return (
-    <Grommet theme={theme}>
+    <Grommet full theme={theme}>
       <AppBar>
         <Heading level="3" margin="none">
           Your daily facts
         </Heading>
         <Button
-          margin={{ left: "medium" }}
           label="Chuck Norris"
           onClick={() => setNavState("chuck")}
           active={navState === "chuck"}
         />
         <Button
-          margin={{ left: "medium" }}
-          label="Cat facts"
+          label="Cats"
           onClick={() => setNavState("cats")}
           active={navState === "cats"}
         />
