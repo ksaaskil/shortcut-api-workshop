@@ -38,19 +38,19 @@ function App() {
           Your daily facts
         </Heading>
         <Button
-          margin={{ left: "small" }}
+          margin={{ left: "medium" }}
           label="Chuck Norris"
           onClick={() => setNavState("chuck")}
           active={navState === "chuck"}
         />
         <Button
-          margin={{ left: "small" }}
+          margin={{ left: "medium" }}
           label="Cat facts"
           onClick={() => setNavState("cats")}
           active={navState === "cats"}
         />
       </AppBar>
-      <Box border={{ color: "brand" }} pad="medium" align="center">
+      <Box pad="medium" align="center">
         {navState === "chuck" && <Jokes amount={2} />}
         {navState === "cats" && <CatFacts amount={2} />}
       </Box>
