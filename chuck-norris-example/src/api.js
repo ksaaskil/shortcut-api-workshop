@@ -1,10 +1,16 @@
 import axios from "axios";
 import { unescape } from "lodash";
 
-export const getRandomJokes = (amount = 1) =>
-  Promise.all([...Array(amount).keys()].map(() => getRandomJoke()));
+export const getArrayOfLength = n => [...Array(n).keys()];
 
-export const getRandomJoke = async () => {
+export const fetchNPromises = (n = 1, fetchPromiseFn) => {
+  const listOfPromises = getArrayOfLength(n).map(() => fetchPromiseFn());
+  return Promise.all(listOfPromises);
+};
+
+export const getRandomJokes = (n = 1) => fetchNPromises(n, getRandomJoke);
+
+const getRandomJoke = async () => {
   const response = await axios.get(
     "https://api.icndb.com/jokes/random?exclude=explicit"
   );
