@@ -7,7 +7,7 @@
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
 
-    <title>APIs</title>
+    <title>Shortcut API workshop slides</title>
 
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/reveal.css" />
@@ -30,67 +30,78 @@
   <body>
     <div class="reveal">
       <div class="slides">
-		<section id="title" data-markdown>
-			<textarea data-template>
+        <section id="title" data-markdown>
+          <textarea data-template>
 			## APIs for applications
 			What, why and how
-			</textarea>
-		</section>
-		<section id="what" data-markdown>
-			<textarea data-template>
+			</textarea
+          >
+        </section>
+        <section id="what" data-markdown>
+          <textarea data-template>
 			### What is an API?
 			- Application programming interface
 			- Wikipedia:
 			> "an API allows one piece of software to interact with another piece of software"
 			- Use in your application to _fetch and persist data_
-			</textarea>
-		</section>
-		<section id="public-apis" data-markdown>
-			<textarea data-template>
+			</textarea
+          >
+        </section>
+        <section id="public-apis" data-markdown>
+          <textarea data-template>
 			### Public (open) APIs
 			- Open to the Internet
 			- [Facebook](https://developers.facebook.com/docs/apis-and-sdks/), [Twitter](https://developer.twitter.com/en/docs.html), [HubSpot](https://developers.hubspot.com/docs/overview), [Amazon S3](https://docs.aws.amazon.com/AmazonS3/latest/API/Welcome.html), ...
 			- Public API may require _authentication_
-			</textarea>
-		</section>
-		<section id="private-apis" data-markdown>
-			<textarea data-template>
+			</textarea
+          >
+        </section>
+        <section id="private-apis" data-markdown>
+          <textarea data-template>
 			### Internal (private) APIs
 			- Open to your company
 			- Protected by network, access control, etc.
 			- Used by the company's apps and microservices
 			- Partner APIs lie between public and private
-			</textarea>
-		</section>
-		<section id="examples">
-			<section id="play-around" data-markdown>
-				<textarea data-template>
+			</textarea
+          >
+        </section>
+        <section id="examples">
+          <section id="play-around" data-markdown>
+            <textarea data-template>
 				### Play around
 				- [List of free APIs](https://github.com/toddmotto/public-apis)
 				- What kind of an app could you build using one of the APIs?
-				</textarea>
-			</section>
-			<section id="example-call">
-				Chuck Norris jokes <a href="http://www.icndb.com/api">http://www.icndb.com/api/</a>
-				<pre><code>
+				</textarea
+            >
+          </section>
+          <section id="example-call">
+            Chuck Norris jokes
+            <a href="http://www.icndb.com/api">http://www.icndb.com/api/</a>
+            <pre><code>
 $ curl "http://api.icndb.com/jokes/random?firstName=Shortcut"
 				</code></pre>
-			</section>
-			<section id="free-code-camp">
-				Check out <a href="https://learn.freecodecamp.org/coding-interview-prep/take-home-projects/">freeCodeCamp take home projects</a>
-			</section>
-		</section>
-		<section id="types-of-apis" data-markdown>
-			<textarea data-template>
+          </section>
+          <section id="free-code-camp">
+            Check out
+            <a
+              href="https://learn.freecodecamp.org/coding-interview-prep/take-home-projects/"
+              >freeCodeCamp take home projects</a
+            >
+          </section>
+        </section>
+        <section id="types-of-apis" data-markdown>
+          <textarea data-template>
 			### Types of APIs
 			- RESTful
 			- GraphQL
 			- gRPC
-			</textarea>
-		</section>
-		<section id="usage-http">
-			<section id="usage-http-1" data-markdown>
-				<textarea data-template>
+			</textarea
+          >
+        </section>
+        <section id="usage-http">
+          <section id="usage-http-1" data-markdown>
+            <textarea data-template>
 				### Usage in development (1)
 				- Example with [axios](https://github.com/axios/axios) in Node.js
 				<pre>
@@ -103,10 +114,11 @@ $ curl "http://api.icndb.com/jokes/random?firstName=Shortcut"
 	console.log("Joke of the day:", joke);
 					</code>
 				</pre>
-				</textarea>
-			</section>
-			<section id="usage-http-2" data-markdown>
-				<textarea data-template>
+				</textarea
+            >
+          </section>
+          <section id="usage-http-2" data-markdown>
+            <textarea data-template>
 				### Usage in development (1)
 				- Example with [requests](https://2.python-requests.org/en/master/) in Python
 				```python
@@ -116,11 +128,12 @@ r = requests.get("http://api.icndb.com/jokes/random", params=params)
 body = r.json()
 print(body)		
 				```
-				</textarea>
-			</section>
-		</section>
-		<section id="usage-sdk" data-markdown>
-			<textarea data-template>
+				</textarea
+            >
+          </section>
+        </section>
+        <section id="usage-sdk" data-markdown>
+          <textarea data-template>
 			### Usage in development (2)
 			- Many APIs have an SDK available (software development kit)
 			- Highly recommended if provided
@@ -136,27 +149,42 @@ const params = {
 const data = await s3.getObject(params).promise();
 				</code>
 			</pre>
-			</textarea>
-		</section>
-		<section id="design-principles" data-markdown>
-			<textarea data-template>
+			</textarea
+          >
+        </section>
+        <section id="design-principles" data-markdown>
+          <textarea data-template>
 			### Design principles
 			- Strive for easy testability
-			- Separate concerns
+				- Separate concerns
+				- Write [pure functions](https://en.wikipedia.org/wiki/Pure_function)
 			- [Facade](https://en.wikipedia.org/wiki/Facade_pattern) pattern
 			> "a facade is an object that serves as a front-facing interface masking more complex underlying or structural code"
-			</textarea>
-		</section>
-		<section id="testing-apis" data-markdown>
-			<textarea data-template>
+			</textarea
+          >
+        </section>
+        <section id="testing-apis" data-markdown>
+          <textarea data-template>
 			### Testing
 			Using real APIs in tests is not recommended:
 			- Production data should be decoupled from tests
 			- Costs and rate-limits
 			- Bugs in code could have [drastic side-effects](https://dev.to/adamwknox/i-made-a-mistake-implementing-a-react-hook-and-got-a-denial-of-service-from-my-backend-5cji)
-			</textarea>
-		</section>
-		<!--
+			</textarea
+          >
+        </section>
+        <section id="testing-stragies" data-markdown>
+          <textarea data-template>
+				### Testing strategies
+				- Only test your own functions
+				- Mock
+					- external libraries
+					- your own modules
+				- Dependency injection
+			</textarea
+          >
+        </section>
+        <!--
 		<section>
 			<p class="fragment grow">grow</p>
 			<p class="fragment shrink">shrink</p>
@@ -170,7 +198,7 @@ const data = await s3.getObject(params).promise();
 			<p class="fragment highlight-blue">highlight-blue</p>
 		</section>
 		-->
-		<!--
+        <!--
 		<section>
 			<pre><code data-trim data-noescape>
 		(def lazy-fib
@@ -181,7 +209,7 @@ const data = await s3.getObject(params).promise();
 			</code></pre>
 		</section>
 		-->
-		<!--
+        <!--
 		<section>
 			<pre><code class="hljs" data-line-numbers="4,8-11">
 import React, { useState } from 'react';
@@ -201,7 +229,7 @@ return (
 			</code></pre>
 		</section>
 		-->
-		<!--
+        <!--
 		<section>
 			<video data-autoplay src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"></video>
 
@@ -217,16 +245,16 @@ return (
       // - https://github.com/hakimel/reveal.js#configuration
       // - https://github.com/hakimel/reveal.js#dependencies
       Reveal.initialize({
-		hash: true,
-		transition: "none",
+        hash: true,
+        transition: "none",
         dependencies: [
           { src: "plugin/markdown/marked.js" },
           { src: "plugin/markdown/markdown.js" },
           { src: "plugin/notes/notes.js", async: true },
-		  { src: "plugin/highlight/highlight.js", async: true },
+          { src: "plugin/highlight/highlight.js", async: true },
 
-		  // Zoom in and out with Alt+click
-		  { src: 'plugin/zoom-js/zoom.js', async: true },
+          // Zoom in and out with Alt+click
+          { src: "plugin/zoom-js/zoom.js", async: true },
         ],
       });
     </script>
