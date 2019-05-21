@@ -26,7 +26,7 @@ const Jokes = ({ amount }) => {
   }, [amount]);
 
   return (
-    <Box direction="column" align="center" justify="start">
+    <Box direction="column" align="center">
       <Heading level="3" alignSelf="center">
         Your daily Chuck dose
       </Heading>
