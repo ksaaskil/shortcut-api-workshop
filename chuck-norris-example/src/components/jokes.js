@@ -7,19 +7,22 @@ const Jokes = ({ amount }) => {
   const [loading, setIsLoading] = React.useState(false);
   const [jokes, setJokes] = React.useState([]);
 
-  React.useEffect(() => {
-    async function updateJokes() {
-      setIsLoading(true);
-      try {
-        const newJokes = await Promise.all(api.getRandomJokes(amount));
-        setJokes(newJokes);
-      } catch (err) {
-        setError(err);
-      } finally {
-        setIsLoading(false);
-      }
+  // Do not refer to state variables here, only in `useEffect`
+  // https://reactjs.org/docs/hooks-faq.html#is-it-safe-to-omit-functions-from-the-list-of-dependencies
+  async function updateJokes(howMany) {
+    setIsLoading(true);
+    try {
+      const newJokes = await Promise.all(api.getRandomJokes(howMany));
+      setJokes(newJokes);
+    } catch (err) {
+      setError(err);
+    } finally {
+      setIsLoading(false);
     }
-    updateJokes();
+  }
+
+  React.useEffect(() => {
+    updateJokes(amount);
   }, [amount]);
 
   return (
