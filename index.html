@@ -188,11 +188,12 @@ const data = await s3.getObject(params).promise();
         <section id="testing-stragies" data-markdown>
           <textarea data-template>
 				### Testing strategies
-				- Only test your own functions
-				- Mock
-					- external libraries
-					- your own modules
-				- Dependency injection
+				1. [Don't mock what you don't own](https://github.com/testdouble/contributing-tests/wiki/Don't-mock-what-you-don't-own)
+				1. Mock
+					- [external libraries](https://github.com/ctimmerm/axios-mock-adapter)
+					- [your own modules](https://jestjs.io/docs/en/manual-mocks#mocking-user-modules)
+				1. [Dependency injection](https://en.wikipedia.org/wiki/Dependency_injection)
+				1. [unmock](https://www.unmock.io/)
 			</textarea
           >
         </section>
