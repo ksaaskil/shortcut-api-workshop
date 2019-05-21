@@ -12,8 +12,7 @@ const Jokes = props => {
 
   async function updateJokes() {
     setIsLoading(true);
-    const newJokes = await api.getRandomJokes(props.amount);
-    // const newJokes = [...this.state.jokes, ...fetchedJokes];
+    const newJokes = await Promise.all(api.getRandomJokes(props.amount));
     setIsLoading(false);
     setJokes(newJokes);
   }

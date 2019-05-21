@@ -1,15 +1,20 @@
 import axios from "axios";
 import { unescape } from "lodash";
 
-export const getArrayOfLength = n => [...Array(n).keys()];
+export const getArrayOfLengthN = n => [...Array(n).keys()];
 
-export const fetchNPromises = (n = 1, fetchPromiseFn) => {
-  const listOfPromises = getArrayOfLength(n).map(() => fetchPromiseFn());
-  return Promise.all(listOfPromises);
-};
+/**
+ * IO: Fetch N joke promises
+ * @param n How many to fetch
+ * @return List of promises containing string
+ */
+export const getRandomJokes = (n = 1) =>
+  getArrayOfLengthN(n).map(() => getRandomJoke());
 
-export const getRandomJokes = (n = 1) => fetchNPromises(n, getRandomJoke);
-
+/**
+ * IO: Fetch one joke
+ * @return Promise containing string
+ */
 const getRandomJoke = async () => {
   const response = await axios.get(
     "https://api.icndb.com/jokes/random?exclude=explicit"
