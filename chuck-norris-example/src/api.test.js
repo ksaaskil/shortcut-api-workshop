@@ -6,7 +6,7 @@ describe("Joke API with mock axios", () => {
   const joke = "Chuck says &amp; does.";
   beforeAll(() => {
     const mockAxios = new MockAdapter(axios);
-    mockAxios.onGet(/jokes\/random/).reply(200, {
+    mockAxios.onGet().reply(200, {
       value: { joke },
     });
   });
