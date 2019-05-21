@@ -7,15 +7,14 @@ const Jokes = props => {
   const [jokes, setJokes] = React.useState([]);
 
   React.useEffect(() => {
+    async function updateJokes() {
+      setIsLoading(true);
+      const newJokes = await Promise.all(api.getRandomJokes(props.amount));
+      setIsLoading(false);
+      setJokes(newJokes);
+    }
     updateJokes();
-  }, []);
-
-  async function updateJokes() {
-    setIsLoading(true);
-    const newJokes = await Promise.all(api.getRandomJokes(props.amount));
-    setIsLoading(false);
-    setJokes(newJokes);
-  }
+  }, [props.amount]);
 
   return (
     <Box direction="column" justify="start">
