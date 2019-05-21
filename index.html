@@ -163,9 +163,19 @@ const data = await s3.getObject(params).promise();
 			</textarea
           >
         </section>
+        <section id="types-of-tests" data-markdown>
+          <textarea data-template>
+						### Testing
+						Eric Elliott [says](https://www.sitepoint.com/javascript-testing-unit-functional-integration/):
+						- *Unit tests* ensure that individual components of the app work as expected.
+						- *Integration tests* ensure that component collaborations work as expected.
+						- *Functional tests* ensure that the app works as expected from the user’s perspective.
+					 </textarea
+          >
+        </section>
         <section id="testing-apis" data-markdown>
           <textarea data-template>
-			### Testing
+			### Testing APIs
 			Using real APIs in tests is not recommended:
 			- Production data should be decoupled from tests
 			- Costs and rate-limits
