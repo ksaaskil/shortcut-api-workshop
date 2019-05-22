@@ -1,6 +1,6 @@
 import React from "react";
 import Artists from "./components/artists";
-import { Box, Grommet, Heading } from "grommet";
+import { Box, Button, Grommet, Heading } from "grommet";
 
 const theme = {
   global: {
@@ -19,6 +19,7 @@ const AppBar = props => (
     align="start"
     background="brand"
     pad="small"
+    gap="small"
     elevation="medium"
     {...props}
   />
@@ -29,8 +30,9 @@ function App() {
     <Grommet theme={theme}>
       <AppBar>
         <Heading level="3" margin="none">
-          My artists
+          Mediate
         </Heading>
+        <Button active={true} label="Artists" />
       </AppBar>
       <Artists />
     </Grommet>
