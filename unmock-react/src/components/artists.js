@@ -26,6 +26,7 @@ const Artists = () => {
           border={{ color: "black", size: "xsmall" }}
           pad="medium"
           align="center"
+          background="light-1"
         >
           {artist.name}
         </Box>
