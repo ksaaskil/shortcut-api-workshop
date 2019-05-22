@@ -9692,63 +9692,63 @@ universalify@^0.1.0:
   resolved "https://registry.yarnpkg.com/universalify/-/universalify-0.1.2.tgz#b646f69be3942dabcecc9d6639c80dc105efaa66"
   integrity sha512-rBJeI5CXAlmy1pV+617WB9J63U6XcazHHF2f2dbJix4XzpUF0RS3Zbj0FGIOCAva5P/d/GBOYaACQ1w+0azUkg==
 
-unmock-cli@0.0.54:
-  version "0.0.54"
-  resolved "https://registry.yarnpkg.com/unmock-cli/-/unmock-cli-0.0.54.tgz#73d3fdc99cf1cf3fb792182e06afe97a5b184c87"
-  integrity sha512-6Wjg6gPGOobC9itbCY5nULQfKAQyVXp9MTbFrvcMXRNL58pJ34jFmiEHeIp67QlF1bqqWXhNo4W8vUBJJ60Y6w==
+unmock-cli@0.0.55:
+  version "0.0.55"
+  resolved "https://registry.yarnpkg.com/unmock-cli/-/unmock-cli-0.0.55.tgz#f6825593e00bbcab70681751c6c70cea06ac2489"
+  integrity sha512-P4DRN0iWr7SByK2dpZfp6SXEix4hSt5in8WW+tUruqaMO40vNeNEPTNFj0mo1iiJJDLxtX/5T/qD3toED0uzFg==
   dependencies:
     commander "^2.20.0"
     glob "^7.1.3"
-    unmock-core "0.0.54"
-    unmock-node "0.0.54"
+    unmock-core "0.0.55"
+    unmock-node "0.0.55"
 
-unmock-core@0.0.54:
-  version "0.0.54"
-  resolved "https://registry.yarnpkg.com/unmock-core/-/unmock-core-0.0.54.tgz#cdf0213e05784fefc0a611280a9bc20ac8ddd3d0"
-  integrity sha512-+KaFPbjkIKMXmNZ124f2gpj+lTdSpSkRklIp9aNHKBDTzHK0MKd321ohqbq0ft6gQrq6G+VaTB6t2HkPx7NrOg==
+unmock-core@0.0.55:
+  version "0.0.55"
+  resolved "https://registry.yarnpkg.com/unmock-core/-/unmock-core-0.0.55.tgz#0d381dc9f58cd35ab5872e915cfeebc19038a8b1"
+  integrity sha512-PxdNg00CbRfi6ll9k0PiO0QauINFsSEln4hBTeS9rgxlrrlAPvXr6/ZGjD3fQhBgprt3wTEFRCWo22UA1+142Q==
   dependencies:
     axios "^0.18.0"
     querystring "^0.2.0"
-    unmock-hash "0.0.54"
+    unmock-hash "0.0.55"
 
-unmock-hash@0.0.54:
-  version "0.0.54"
-  resolved "https://registry.yarnpkg.com/unmock-hash/-/unmock-hash-0.0.54.tgz#83a8c13172b98330672ac49aa26eed03d478b1f6"
-  integrity sha512-dWr8UpdhcN0Knj3eBPdTFks9tbAIV/R6+fske3K0pNCwD50eD1ZQLlSfujsAZx5ZhcWCQ11mAtnlU5Xjz4qvHw==
+unmock-hash@0.0.55:
+  version "0.0.55"
+  resolved "https://registry.yarnpkg.com/unmock-hash/-/unmock-hash-0.0.55.tgz#29bdb73ed69f9a9efe10851e51598a4364091eb9"
+  integrity sha512-SR8GV4ow++AiIubjk5d5yqqyIGHYhwkFo7ZbZ9mDfkP2D6D3Ys0pmkCWsAA3zJTIapa79fx3SpwurhXQGmw9JA==
   dependencies:
     content-type "^1.0.4"
     object-hash "^1.3.1"
     querystring "^0.2.0"
 
-unmock-jsdom@^0.0.54:
-  version "0.0.54"
-  resolved "https://registry.yarnpkg.com/unmock-jsdom/-/unmock-jsdom-0.0.54.tgz#5504065628b8e95444e5f5bc86546b94bb37fc77"
-  integrity sha512-3/vFTVHI9DkB7D76xhER29slzYUZE+qCApbl2za6JMdYOJnl6wusIrKcPOtR6MSPcW1Bv724hrN//Cv8pErrag==
+unmock-jsdom@^0.0.55:
+  version "0.0.55"
+  resolved "https://registry.yarnpkg.com/unmock-jsdom/-/unmock-jsdom-0.0.55.tgz#e1d3e4dde0b9df9a54170c669d6cb3f6b61d7bb1"
+  integrity sha512-JG/KVe0WXOiRA9UMkw3vAQuaQvvHEtXpw/l3S8p4DCoK/qO2mLhwF6ObDLfXNa+xAf/GjVTXfdVDxGJKcTJ8MQ==
   dependencies:
     js-yaml "^3.13.1"
-    unmock-core "0.0.54"
-    unmock-hash "0.0.54"
+    unmock-core "0.0.55"
+    unmock-hash "0.0.55"
 
-unmock-node@0.0.54:
-  version "0.0.54"
-  resolved "https://registry.yarnpkg.com/unmock-node/-/unmock-node-0.0.54.tgz#ecf91e4102dd008219bb88f02a518bda05f3e198"
-  integrity sha512-2Iqp4lQwdjqoHgXI4VoGFsk90At7KmQ+N8cM90ZRY0xIDOjLEyMmZFc8bbvCOjxGdaHdK3vYUQr2GZZ8HzL4kw==
+unmock-node@0.0.55:
+  version "0.0.55"
+  resolved "https://registry.yarnpkg.com/unmock-node/-/unmock-node-0.0.55.tgz#40fb3114505780271d91609c6864c5f1b75648c4"
+  integrity sha512-4uiPkwAPn4XuH6cP8JQ1pIHBrIfNcxbFmXARgRdf4zSMBBn/JMbOoT8xw2iUnNtrN92LnzmmnHUKw9IiDEPp7w==
   dependencies:
     expect "^24.7.1"
     ini "^1.3.5"
     js-yaml "^3.13.1"
     mitm "^1.7.0"
     mkdirp "^0.5.1"
-    unmock-core "0.0.54"
-    unmock-hash "0.0.54"
+    unmock-core "0.0.55"
+    unmock-hash "0.0.55"
     winston "^3.2.1"
 
-unmock@^0.0.54:
-  version "0.0.54"
-  resolved "https://registry.yarnpkg.com/unmock/-/unmock-0.0.54.tgz#a8747b84f5e4d1036c0e6efdcf629015d7fcdab5"
-  integrity sha512-JwVr0GvMTF6yblIDfRy4Ec7Qqd0igVx3/VgFw+hkPP0ZB9dU2ebZ6wk21gAW76p3EEtlkYf0B5Qmwklry9YyqA==
+unmock@^0.0.55:
+  version "0.0.55"
+  resolved "https://registry.yarnpkg.com/unmock/-/unmock-0.0.55.tgz#d3a176f899f8ff7e1f824ac787a7af00904fc522"
+  integrity sha512-FmWGDXU6yG/iyLINppx1qYI1Oy9UghRGhHGkbLLDtjltbfTupf/CoPrRmLGCx3y5ejP+BWZTCSsANM7zJnHHXw==
   dependencies:
-    unmock-cli "0.0.54"
+    unmock-cli "0.0.55"
 
 unpipe@1.0.0, unpipe@~1.0.0:
   version "1.0.0"

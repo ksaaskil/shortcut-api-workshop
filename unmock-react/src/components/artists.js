@@ -1,14 +1,19 @@
 import { Box, Grid } from "grommet";
 import React from "react";
+import { getArtists } from "../api/spotify";
+import { unmock } from "unmock-jsdom";
 
 const Artists = () => {
   const [artists, setArtists] = React.useState([]);
 
-  React.useEffect(() => {
-    const fetchedArtists = [...Array(5).keys()].map(i => ({
-      name: `Artist ${i + 1}`,
-    }));
+  async function fetchAndSetArtists() {
+    await unmock();
+    const fetchedArtists = await getArtists();
     setArtists(fetchedArtists);
+  }
+
+  React.useEffect(() => {
+    fetchAndSetArtists();
   }, []);
 
   return (
@@ -22,8 +27,9 @@ const Artists = () => {
     >
       {artists.map((artist, i) => (
         <Box
+          key={`artist_${i}`}
           direction="column"
-          border={{ color: "black", size: "xsmall" }}
+          // border={{ color: "black", size: "xsmall" }}
           pad="medium"
           align="center"
           background="light-1"
